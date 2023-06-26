@@ -6,7 +6,7 @@ const provider = new ethers.providers.JsonRpcProvider(
 );
 
 const main = async () => {
-  const balance = await provider.getBalance('vitalik.eth');
+  const balance = await provider.getBalance(process.env.VITALIK_ENS);
   console.log(`\nETH Balance of vitalik.eth: ${ethers.utils.formatEther(balance)}`);
 };
 
